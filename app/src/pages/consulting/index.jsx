@@ -9,7 +9,7 @@ import TestimonialCards from "../../components/testimonialCards"
 import './style.scss'
 import { Accordion } from 'react-bootstrap'
 
-const Consulting = () => {
+const HomePage = () => {
     return (
         <>
             <Helmet>
@@ -63,7 +63,7 @@ const Hero = () => {
                         <div className="col-lg-6 align-self-center">
                             <h1>Attract more patients and boost your revenue with our healthcare digital marketing solutions.</h1>
                             <p className='txt-1 mt-16 me-lg-5'>Experience exceptional results with us.</p>
-                            <form className='mt-20 me-lg-5'>
+                            {/* <form className='mt-20 me-lg-5'>
                                 <div className="cta-form d-flex align-items-center justify-content-between">
                                     <div className="cta-input">
                                         <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="Enter your email" />
@@ -72,10 +72,11 @@ const Hero = () => {
                                         <button type="submit" className="btn btn-primary btn-lg">Get a demo</button>
                                     </div>
                                 </div>
-                            </form>
+                            </form> */}
                         </div>
                         <div className="col-lg-6 align-self-center">
-                            <img src={require('./assets/hero_image.png')} className="img-fluid" alt="hero" />
+                            {/* <img src={require('./assets/hero_image.png')} className="img-fluid" alt="hero" /> */}
+                            <img src='https://dummyimage.com/974x746/ccc/fff.jpg' className="img-fluid" alt="hero" />
                         </div>
                     </div>
                 </div>
@@ -88,26 +89,26 @@ const Hero = () => {
 const Services = () => {
     const services = [
         {
-            name: 'Grow you business',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Digital Patient Acquisition',
+            info: ['Search Engine Optimization', 'Performance Ads & Lead Generation', 'Local SEO'],
             link: '/services',
             icoUrl: 'assets/service_ico1.svg'
         },
         {
-            name: 'Boost the sales',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Reputation Management',
+            info: ['Google Review Management','Quora Review','Testimonials Video Creation'],
             link: '/services',
             icoUrl: 'assets/service_ico2.svg'
         },
         {
-            name: 'Increase engagements',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Brand Building',
+            info: ['Social Media Marketing','Video Marketing','Influencer & PR'],
             link: '/services',
             icoUrl: 'assets/service_ico3.svg'
         },
         {
-            name: 'Improve online presense',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Sales Automation',
+            info: ['CRM','Leadmade','IVM & Call Tracking'],
             link: '/services',
             icoUrl: 'assets/service_ico4.svg'
         }
@@ -118,7 +119,7 @@ const Services = () => {
                 <div className="container">
                     <div className="row mb-40">
                         <div className="col-xl-6 col-lg-6 offset-xl-3 offset-lg-3 text-center">
-                            <div className="section-tag mb-8">What we do</div>
+                            <div className="section-tag mb-8">Our Services</div>
                             <h2>Best in class innovative tech solutions</h2>
                         </div>
                     </div>
@@ -137,10 +138,9 @@ const Services = () => {
 }
 
 const FAQSection = () => {
-
     const FAQ_data = [
         {
-            title: 'How to scale performance using stact?',
+            title: 'Why Branding Pioneers?',
             text: 'Our goal is to enable your business to reach its full potential with the help of our digital tools. Our fully integrated suite of applications lets you focus on your core business, while we take care of all aspects of the technology stack.'
         },
         {
@@ -194,68 +194,46 @@ const FAQSection = () => {
 }
 
 const About = () => {
-
-    const features_data = [
-        "Seamless, comprehensive, and cost-effective",
-        "Connect with your customers",
-        "Streamline your operations"
-    ]
-
     return (
         <>
             <section className="section-global bg-shade-1">
                 <div className="container">
                     <div className="row mb-40 gy-4">
                         <div className="col-lg-6 align-self-center d-flex justify-content-center align-items-center">
-                            <div style={{ maxWidth: '600px' }}>
-                                <img src={require('./assets/about1.png')} className="img-fluid" alt="About" />
+                            <div style={{ maxWidth: '600px', boxShadow: '6px 6px #000' }}>
+                                <img src='https://dummyimage.com/927x622/ccc/fff.jpg' className="img-fluid" alt="About" />
                             </div>
                         </div>
                         <div className="col-lg-6 align-self-center">
                             <div className="section-tag mb-8">Growth</div>
-                            <h2 className='mb-16'>We always ensure customer satisfaction</h2>
+                            <h2 className='mb-16'>Why Branding Pioneers?</h2>
                             <p className='txt-1'>
-                                Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands. We empower digital brands to grow faster by providing services in growth marketing + operations and venture capital.
-                                <br /><br />
-                                We cut through the clutter to uncover new opportunities, and always ensure customer satisfaction
+                                Branding Pioneers is a full-service digital marketing agency specializing in the healthcare industry. We have a team of experienced professionals who understand the healthcare industry and know how to get your website in front of the right people. From improving your online presence to driving more traffic to your website, we'll help you achieve your goals.
                             </p>
-                            <div className='mt-16'>
-                                <Link to="/about" className='arrow-link'>
-                                    Learn more
-                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className='ms-1'>
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M3 7.5C3 7.32953 3.06584 7.16605 3.18304 7.04551C3.30024 6.92498 3.45919 6.85726 3.62493 6.85726H10.8654L8.18192 4.09861C8.06458 3.97792 7.99865 3.81423 7.99865 3.64355C7.99865 3.47287 8.06458 3.30918 8.18192 3.18849C8.29927 3.0678 8.45842 3 8.62437 3C8.79032 3 8.94948 3.0678 9.06682 3.18849L12.8164 7.04494C12.8746 7.10464 12.9208 7.17557 12.9523 7.25366C12.9838 7.33175 13 7.41546 13 7.5C13 7.58454 12.9838 7.66825 12.9523 7.74634C12.9208 7.82443 12.8746 7.89536 12.8164 7.95506L9.06682 11.8115C8.94948 11.9322 8.79032 12 8.62437 12C8.45842 12 8.29927 11.9322 8.18192 11.8115C8.06458 11.6908 7.99865 11.5271 7.99865 11.3564C7.99865 11.1858 8.06458 11.0221 8.18192 10.9014L10.8654 8.14274H3.62493C3.45919 8.14274 3.30024 8.07502 3.18304 7.95449C3.06584 7.83395 3 7.67047 3 7.5Z" fill="currentColor" />
-                                    </svg>
-                                </Link>
-                            </div>
                         </div>
                     </div>
                     <div className="row pt-5 gy-4">
                         <div className="col-lg-6 align-self-center">
                             <div className="section-tag mb-8">Solutions</div>
-                            <h2 className='mb-16'>Deliver personalized business tatics at scale</h2>
-                            <p className='txt-1'>We craft digital experiences that resonate with your audience and grow your business. If you have a vision for the next big thing, we can help you make it happen. </p>
-                            {features_data.map((e, i) => <div key={i} className="txt-2 color-1 fw-500 mb-8 d-flex align-items-center">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className='me-2'>
-                                    <rect width="24" height="24" rx="12" fill="#0FA958" />
-                                    <path d="M6.66675 12L10.6667 16L17.3334 8" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                </svg>
-
-
-                                {e}
-                            </div>)}
-                            <div className='mt-16'>
-                                <Link to="/about" className='arrow-link'>
-                                    Learn more
-                                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className='ms-1'>
-                                        <path fillRule="evenodd" clipRule="evenodd" d="M3 7.5C3 7.32953 3.06584 7.16605 3.18304 7.04551C3.30024 6.92498 3.45919 6.85726 3.62493 6.85726H10.8654L8.18192 4.09861C8.06458 3.97792 7.99865 3.81423 7.99865 3.64355C7.99865 3.47287 8.06458 3.30918 8.18192 3.18849C8.29927 3.0678 8.45842 3 8.62437 3C8.79032 3 8.94948 3.0678 9.06682 3.18849L12.8164 7.04494C12.8746 7.10464 12.9208 7.17557 12.9523 7.25366C12.9838 7.33175 13 7.41546 13 7.5C13 7.58454 12.9838 7.66825 12.9523 7.74634C12.9208 7.82443 12.8746 7.89536 12.8164 7.95506L9.06682 11.8115C8.94948 11.9322 8.79032 12 8.62437 12C8.45842 12 8.29927 11.9322 8.18192 11.8115C8.06458 11.6908 7.99865 11.5271 7.99865 11.3564C7.99865 11.1858 8.06458 11.0221 8.18192 10.9014L10.8654 8.14274H3.62493C3.45919 8.14274 3.30024 8.07502 3.18304 7.95449C3.06584 7.83395 3 7.67047 3 7.5Z" fill="currentColor" />
-                                    </svg>
-                                </Link>
-                            </div>
+                            <h2 className='mb-16'>Our Reporting Solutions</h2>
+                            <p className='txt-1'>Our reporting process is a bit different than what you may be used to. We don't just focus on SEO tactics like on-page and off-page optimization. Instead, we take a more holistic approach that includes all aspects of your digital marketing strategy.<br /><br />This means that we not only look at your website and see how it's performing in search engines, but we also track your social media engagement, email marketing campaigns, and anything else that's happening online. We then compile all of this data into an easy-to-understand report so you can see which areas are working well and which need improvement.</p>
                         </div>
                         <div className="col-lg-6 align-self-center d-flex justify-content-center align-items-center">
-                            <div style={{ maxWidth: '600px' }}>
-                                <img src={require('./assets/about2.png')} className="img-fluid" alt="About" />
+                            <div style={{ maxWidth: '600px', boxShadow: '6px 6px #000' }}>
+                                <img src='https://dummyimage.com/927x622/ccc/fff.jpg' className="img-fluid" alt="About" />
                             </div>
+                        </div>
+                    </div>
+                    <div className="row mt-40 gy-4">
+                        <div className="col-lg-6 align-self-center d-flex justify-content-center align-items-center">
+                            <div style={{ maxWidth: '600px', boxShadow: '6px 6px #000' }}>
+                                <img src='https://dummyimage.com/927x622/ccc/fff.jpg' className="img-fluid" alt="About" />
+                            </div>
+                        </div>
+                        <div className="col-lg-6 align-self-center">
+                            <div className="section-tag mb-8">Growth</div>
+                            <h2 className='mb-16'>Medical Digital Marketing</h2>
+                            <p className='txt-1'>Marketing for the healthcare industry is often very different than other industries. While there are undoubtedly many similarities, the needs and behaviors of healthcare customers and practitioners are often radically different. In today's competitive world, every healthcare professional needs a comprehensive digital marketing strategy to stay relevant. With almost half of all searches in India being conducted on mobile devices, it's critical that your healthcare Businesses is easy to find. Branding Pioneers is one of the best healthcare digital marketing agency. We help our clients grow their online presence and reach their target audiences.</p>
                         </div>
                     </div>
                 </div>
@@ -381,4 +359,4 @@ const Contact = () => {
 }
 
 
-export default Consulting
+export default HomePage

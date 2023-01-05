@@ -8,12 +8,15 @@ import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 import { clint } from '../Sanity'
 import PostSkeleton from '../components/PostSkeleton'
+import NotFound from '../components/errorComp'
 
 const Pages = () => {
     const { slug, mainPage } = useParams()
 
     const [post, setPost] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [errorPage, setErrorPage] = useState(false)
+
 
     // *[_type == "page" && references(*[_type == "mainpage" && slug.current == 'our-speciality']._id) && slug.current == 'healthcare']
 
@@ -31,8 +34,14 @@ const Pages = () => {
           },
           "parent": parent[]-> title
         }`).then((data) => {
-            setPost(data[0])
-            setIsLoading(false)
+            if (data[0] === undefined) {
+                setErrorPage(true)
+                console.log('error page');
+            }
+            else {
+                setPost(data[0])
+                setIsLoading(false)
+            }
         }).catch(e => console.log(e));
     }, [slug, mainPage])
 
@@ -50,7 +59,7 @@ const Pages = () => {
                             <CaseStudy data={post} />
                         </div>
                         :
-                        <PostSkeleton/>
+                        !errorPage ? <PostSkeleton /> : <NotFound />
                 }
                 <Contact />
                 <Footer />

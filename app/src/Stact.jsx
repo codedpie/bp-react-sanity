@@ -5,7 +5,6 @@ import NotFound from './pages/404';
 import About from './pages/about';
 import Blog from './pages/blog';
 import BlogArticle from './pages/blogArticle';
-import Consulting from './pages/consulting';
 import Contact from './pages/contact';
 import Pricing from './pages/pricing';
 import ProjectDetails from './pages/projectDetails';
@@ -25,6 +24,7 @@ import Landing2 from './pages/landing2';
 import Landing3 from './pages/landing3';
 import SaasLanding from './pages/saasLanding';
 import PersonalPortfolio from './pages/personalPortfolio';
+import HomePage from './pages/consulting';
 
 function Stact() {
   return (
@@ -41,7 +41,7 @@ function Stact() {
           {/* <Router basename={'/reactapp'}> */}
           <ScrollToTop />
           <Routes>
-            <Route path='/' element={<Consulting />} />
+            <Route path='/' element={<HomePage />} />
             <Route path='/landing-1' element={<Landing1 />} />
             <Route path='/landing-2' element={<Landing2 />} />
             <Route path='/landing-3' element={<Landing3 />} />

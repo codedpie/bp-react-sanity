@@ -8,12 +8,14 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { PortableText } from '@portabletext/react'
 import PostSkeleton from '../components/PostSkeleton'
+import NotFound from '../components/errorComp'
 
 const InternalPage = () => {
     const { slug } = useParams()
 
     const [post, setPost] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [errorPage, setErrorPage] = useState(false)
 
     useEffect(() => {
         clint.fetch(`*[_type == "internalpage" && slug.current == "${slug}"] {
@@ -31,8 +33,14 @@ const InternalPage = () => {
           "categories": categories[]->title
         }`
         ).then((data) => {
-            setPost(data[0])
-            setIsLoading(false)
+            if (data[0] === undefined) {
+                setErrorPage(true)
+                console.log('error page');
+            }
+            else {
+                setPost(data[0])
+                setIsLoading(false)
+            }
         }).catch(e => console.log(e));
     }, [slug])
 
@@ -49,7 +57,7 @@ const InternalPage = () => {
                         <CaseStudy data={post} />
                     </div>
                     :
-                    <PostSkeleton/>
+                    !errorPage ? <PostSkeleton /> : <NotFound />
                 }
                 <Contact />
                 <Footer />

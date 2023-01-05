@@ -45,43 +45,43 @@ const ServicesSection = () => {
 
     const services = [
         {
-            name: 'Applied AI',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Digital Patient Acquisition',
+            info: ['Search Engine Optimization', 'Performance Ads & Lead Generation', 'Local SEO'],
             icoUrl: 'assets/service_ico1.svg'
         },
         {
-            name: 'Cyber Security',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Reputation Management',
+            info: ['Google Review Management','Quora Review','Testimonials Video Creation'],
             icoUrl: 'assets/service_ico2.svg'
         },
         {
-            name: 'Internet of Things',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Brand Building',
+            info: ['Social Media Marketing','Video Marketing','Influencer & PR'],
             icoUrl: 'assets/service_ico3.svg'
         },
         {
-            name: 'Digital Marketing',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Sales Automation',
+            info: ['CRM','Leadmade','IVM & Call Tracking'],
             icoUrl: 'assets/service_ico4.svg'
         },
         {
-            name: 'Cloud Management',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Digital Patient Acquisition',
+            info: ['Search Engine Optimization', 'Performance Ads & Lead Generation', 'Local SEO'],
             icoUrl: 'assets/service_ico5.svg'
         },
         {
-            name: 'Machine Learning',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Reputation Management',
+            info: ['Google Review Management','Quora Review','Testimonials Video Creation'],
             icoUrl: 'assets/service_ico6.svg'
         },
         {
-            name: 'Data Analysis',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Brand Building',
+            info: ['Social Media Marketing','Video Marketing','Influencer & PR'],
             icoUrl: 'assets/service_ico7.svg'
         },
         {
-            name: 'Data Insights',
-            info: 'Our simple process helps us stay nimble, evolve rapidly and ultimately grow brands.',
+            name: 'Sales Automation',
+            info: ['CRM','Leadmade','IVM & Call Tracking'],
             icoUrl: 'assets/service_ico8.svg'
         }
     ]

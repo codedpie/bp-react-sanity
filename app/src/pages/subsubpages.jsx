@@ -8,12 +8,14 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { PortableText } from '@portabletext/react'
 import PostSkeleton from '../components/PostSkeleton'
+import NotFound from '../components/errorComp'
 
 const SubSubPages = () => {
     const { rootPage, parentPage, mainPage, slug } = useParams()
 
     const [post, setPost] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [errorPage, setErrorPage] = useState(false)
 
     useEffect(() => {
         clint.fetch(`*[_type == "subsubpage" && references(*[_type == "subpage" && references(*[_type == "page" && references(*[_type == "mainpage" && slug.current == "${rootPage}"]._id) && slug.current == "${parentPage}"]._id) && slug.current == "${mainPage}"]._id) && slug.current == "${slug}"] {
@@ -29,8 +31,14 @@ const SubSubPages = () => {
           },
           "parent": parent[]-> title
         }`).then((data) => {
-            setPost(data[0])
-            setIsLoading(false)
+            if (data[0] === undefined) {
+                setErrorPage(true)
+                console.log('error page');
+            }
+            else {
+                setPost(data[0])
+                setIsLoading(false)
+            }
         }).catch(e => console.log(e));
     }, [slug, mainPage, parentPage, rootPage])
 
@@ -48,7 +56,7 @@ const SubSubPages = () => {
                             <CaseStudy data={post} />
                         </div>
                         :
-                        <PostSkeleton/>
+                        !errorPage ? <PostSkeleton /> : <NotFound />
                 }
                 <Contact />
                 <Footer />
@@ -58,7 +66,6 @@ const SubSubPages = () => {
 }
 
 const Hero = ({ data }) => {
-    console.log(data);
     return (
         <>
             <section className='section-global bg-shade-1 hero'>

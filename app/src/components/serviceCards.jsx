@@ -9,7 +9,11 @@ const ServiceCards = ({data,src}) => {
                     <img src={require(`../pages/${src}/${data.icoUrl}`)} className="mb-8" alt={data.name}/>
                 </div>
                 <h3>{data.name}</h3>
-                <p className="txt-2 mb-8">{data.info}</p>
+                <p className="txt-4 mb-8">
+                    <li>{data.info[0]}</li>
+                    <li>{data.info[1]}</li>
+                    <li>{data.info[2]}</li>
+                </p>
                 {
                     data.link&&<Link to={data.link} className="service-link">
                         Learn More

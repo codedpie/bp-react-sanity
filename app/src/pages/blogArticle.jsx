@@ -8,12 +8,15 @@ import { useParams } from 'react-router-dom';
 import { clint } from '../Sanity'
 import { PortableText } from '@portabletext/react'
 import PostSkeleton from '../components/PostSkeleton'
+import NotFound from '../components/errorComp'
+
 
 const BlogArticle = () => {
     const { slug } = useParams()
 
     const [post, setPost] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [errorPage, setErrorPage] = useState(false)
 
     useEffect(() => {
         clint.fetch(`*[slug.current == "${slug}"] {
@@ -31,8 +34,14 @@ const BlogArticle = () => {
           "categories": categories[]->title
         }`
         ).then((data) => {
-            setPost(data[0])
-            setIsLoading(false)
+            if (data[0] === undefined) {
+                setErrorPage(true)
+                console.log('error page');
+            }
+            else {
+                setPost(data[0])
+                setIsLoading(false)
+            }
         }).catch(e => {
             console.log(e)
         });
@@ -45,15 +54,12 @@ const BlogArticle = () => {
             </Helmet>
             <NavBar />
             <div className='blog-article-container'>
-                {
-                    !isLoading ?
-                        <div className="loadedData">
-                            <Hero data={post} />
-                            <BlogArticleSection data={post} />
-                        </div>
-                        :
-                        <PostSkeleton />
-                }
+                {!isLoading ?
+                    <div className="loadedData">
+                        <Hero data={post} />
+                        <BlogArticleSection data={post} />
+                    </div>
+                    : !errorPage ? <PostSkeleton /> : <NotFound />}
                 <Contact />
                 <Footer />
             </div>
@@ -116,11 +122,7 @@ const Contact = () => {
         link: '/contact'
     }
 
-    return (
-        <>
-            <ContactSection bg="bg-shade-blue" contact_data={contact_data} />
-        </>
-    )
+    return <ContactSection bg="bg-shade-blue" contact_data={contact_data} />
 }
 
 export default BlogArticle

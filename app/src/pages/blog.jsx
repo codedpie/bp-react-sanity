@@ -47,7 +47,7 @@ const BlogSection = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        clint.fetch(`*[_type == "post"]{
+        clint.fetch(`*[_type == "blog"]{
             title,
             slug,
             _createdAt,
