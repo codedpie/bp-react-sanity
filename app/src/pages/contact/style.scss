@@ -1,0 +1,14 @@
+.contact-container{
+    .contact-link{
+        text-decoration: none;
+        .contact-link-container{
+            box-shadow: 0 0 0 1px var(--border-brutal);
+            border-radius: 15px;
+            padding: 16px;
+            transition: 0.3s;
+            &:hover{
+                background: rgba(0,0,0,0.03);
+            }
+        }
+    }
+}

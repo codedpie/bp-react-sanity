@@ -1,0 +1,47 @@
+.consulting {
+  .cta-form {
+    background: #fefefe;
+    border-radius: 13px;
+    // overflow: hidden;
+    padding: 5px;
+    flex-wrap: wrap;
+    box-shadow: 0 0 0 1px var(--border-brutal);
+    @media (max-width: 575.98px) {
+      padding: 0;
+      background: transparent;
+      box-shadow: none;
+    }
+    .cta-input {
+      flex-grow: 1;
+      @media (max-width: 575.98px) {
+        margin-bottom: 16px;
+      }
+      input {
+        border: 0;
+        width: 100%;
+        border-radius: 10px;
+        line-height: 48px;
+        padding: 0 5px 0 25px;
+        box-shadow: none;
+        // &:focus{box-shadow: 0 0 0 1px var(--border-brutal);}
+        @media (max-width: 575.98px) {
+          box-shadow: 0 0 0 1px var(--border-brutal);
+        }
+      }
+    }
+    .cta-btn {
+      @media (max-width: 575.98px) {
+        width: 100%;
+        display: flex;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+  .accordion-button {
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  }
+}

@@ -1,0 +1,87 @@
+.landing-1{
+    .cta-form{
+        background: #fefefe;
+        border-radius: 13px;
+        // overflow: hidden;
+        padding: 5px;
+        flex-wrap: wrap;
+        box-shadow: 0 0 0 1px var(--border-brutal);
+        @media (max-width: 575.98px){
+            padding: 0;
+            background: transparent;
+            box-shadow: none;
+        }
+        .cta-input{
+            flex-grow: 1;
+            @media (max-width: 575.98px){
+                margin-bottom: 16px;
+            }
+            input{
+                border: 0;
+                width: 100%;
+                border-radius: 10px;
+                line-height: 48px;
+                padding: 0 5px 0 25px;
+                box-shadow: none;
+                // &:focus{box-shadow: 0 0 0 1px var(--border-brutal);}
+                @media (max-width: 575.98px){
+                    box-shadow: 0 0 0 1px var(--border-brutal);
+                }
+            }
+        }
+        .cta-btn{
+            @media (max-width: 575.98px){
+                width: 100%;
+                display: flex;
+            }
+            .btn{
+                width: 100%;
+            }
+        }
+    }
+    .white-link{
+        color: var(--color-1);
+        text-decoration: underline;
+        font-weight: 500;
+        &:hover{
+            color: var(--color-1);
+        }
+    }
+    .time-line{
+        margin-left: 17.5px;
+        .content{
+            position: relative;
+            padding-left: 35px;
+            border-left: 2px solid rgba($color: #000000, $alpha: 0.1);
+            padding-bottom: 16px;
+            &:last-child{
+                border-color: transparent;
+            }
+            .index{
+                position: absolute;
+                background: var(--color-primary);
+                color: #fefefe;
+                height: 35px;
+                width: 35px;
+                font-size: 18px;
+                font-weight: 700;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: -19px;
+                box-shadow: 0 0 0 3px var(--bg-shade-1);
+            }
+        }
+
+    }
+    .about-banner-image{
+        width: 500px;
+        @media (max-width: 991.98px){
+            width: 100%;
+        }
+    }
+    .counter-section{
+        padding: 60px 0;
+    }
+}

@@ -1,0 +1,14 @@
+.app-landing{
+    .feature-row-margin{
+        margin-top: 60px;
+        @media (max-width: 767.98px) {
+            margin-top: 50px;
+        }
+        @media (max-width: 575.98px) {
+            margin-top: 40px;
+        }
+        @media (min-width: 1200px){
+            margin-top: 80px;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+.landing-3{
+    .hero-image-container{
+        img{
+            height: calc(3rem + 53vw);
+            margin-top:  calc(3rem + 4vw);
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            border-radius: 15px;        
+            box-shadow: 0 0 0 1px var(--border-brutal), 5px 5px 0 var(--border-brutal);
+            @media (min-width: 1200px) {
+                margin-top: 100px;
+                height: 680px;
+            }
+        }
+    }
+    .capability-card{
+        .count{
+            font-size: 18px;
+            font-weight: 700;
+            color: #fefefe;
+            background: var(--color-primary);
+            border-radius: 50%;
+            height: 30px;
+            min-width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 0;
+        }
+    }
+    .about-img-container{
+        box-shadow: 0 0 0 1px var(--border-brutal), 5px 5px 0 var(--border-brutal); 
+        transition: 0.3s;
+        @media (min-width: 992px){
+            max-width: 500px;
+        }
+        width: 100%;
+        border-radius: 15px;
+        overflow: hidden;
+        img{
+            height: calc(3rem + 40vw);
+            @media (min-width: 992px){
+                height: calc(1rem + 25vw);
+            }
+            @media (min-width: 1200px){
+                height: 340px;
+            }
+            object-fit: cover;
+            object-position: center;
+            width: 100%;
+            transition: 0.3s;
+        }
+        a{
+            position: relative;
+            svg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                transition: 0.3s;
+            }
+            &:hover{
+                img{
+                    filter: brightness(0.8);
+                }
+                svg{
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+            }
+        }
+        &:hover{
+            box-shadow: 0 0 0 1px var(--border-brutal); 
+        }
+    }
+    .counter-section{
+        padding: 20px 30px;
+    }
+    .info-banner-image{
+        width: 500px;
+        @media (max-width: 991.98px){
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.feature-showcase-card-container{
+    .feature-showcase-card{
+        .feature-count{
+            font-size: 22px;
+            font-weight: 700;
+            color: #000;
+            width: 50px;
+            display: inline-block;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 0 0 1px var(--border-brutal),3px 3px 0 var(--border-brutal); 
+        }
+    }
+    
+    &:nth-child(3n + 1) .feature-showcase-card .feature-count{
+        background: var(--bg-shade-yellow);
+    }
+    &:nth-child(3n + 2) .feature-showcase-card .feature-count{
+        background: var(--bg-shade-blue);
+    }
+    &:nth-child(3n + 3) .feature-showcase-card .feature-count{
+        background: var(--bg-shade-green);
+    }
+}

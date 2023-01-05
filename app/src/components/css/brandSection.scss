@@ -1,0 +1,33 @@
+.brand-section-container{
+    border-bottom: 1px solid var(--border-brutal);
+}
+.brand-section{
+    padding-bottom: 50px;
+   .brands-container{
+        display: flex;
+        flex-wrap: wrap;
+        .brand{
+            padding: 15px 15px 35px 15px;
+            flex-basis: 20%;
+            @media (max-width: 1200px) {
+                flex-basis: 25%;
+            }
+            @media (max-width: 991.98px) {
+                flex-basis: 33%;
+            }
+            @media (max-width: 767.98px) {
+                flex-basis: 33%;
+            }
+            @media (max-width: 575.98px) {
+                flex-basis: 50%;
+            }
+        }
+    }    
+    &.bordered{
+        padding-top: 80px;
+        border-top: 1px solid var(--border-brutal);
+    }
+    &.pt-60{
+        padding-top: 60px;
+    }
+}

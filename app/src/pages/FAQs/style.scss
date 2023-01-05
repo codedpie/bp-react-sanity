@@ -1,0 +1,25 @@
+.faqs-container{
+    .accordion-item{
+        border-bottom: 1px solid var(--border-brutal);
+    }
+    .accordion-button{
+        background: transparent;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: 'Inter',sans-serif;
+        &:focus{
+            box-shadow: none;
+            color: var(--color-1);
+        }
+        &:not(.collapsed){
+            color: var(--color-1);
+            box-shadow: none;
+        }
+    }
+    .accordion-body{
+        background: transparent;
+        color: var(--color-1);
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}

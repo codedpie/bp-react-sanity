@@ -1,0 +1,19 @@
+.project-detail-container{
+    .case-study{
+        img{
+            border-radius: 15px;
+            box-shadow: 0 0 0 1px var(--border-brutal), 5px 5px 0 var(--border-brutal);
+        }
+    }  
+    .case-study-section{
+        max-width: 692px;
+        margin-left: auto;
+        margin-right: auto;
+        p{
+            margin: 13px 0;
+        }
+        h2{
+            margin-top: 30px;
+        }
+    }
+}

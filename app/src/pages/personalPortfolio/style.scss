@@ -1,0 +1,38 @@
+.portfolio-container{
+    .counter-section{
+        padding: 60px 0;
+    }
+    .contact-link-container{
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        .contact-link{
+            text-decoration: none;
+            .contact-link-container{
+                box-shadow: 0 0 0 1px var(--border);
+                border-radius: 15px;
+                padding: 10px;
+                transition: 0.3s;
+                &:hover{
+                    background: rgba(0,0,0,0.03);
+                }
+            }
+        }
+        &:nth-child(1){
+            margin-bottom: 15px;
+        }
+    }
+    .portfolio-footer-bottom{
+        .container{
+            border-top: 1px solid var(--border);
+            .copyright{
+                color:rgba(255,255,255,0.5);
+            }
+            .social-link{
+                a{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}

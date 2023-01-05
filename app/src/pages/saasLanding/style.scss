@@ -1,0 +1,41 @@
+.saas-landing{
+    .hero-image-banner-container{
+        position: relative;
+        background: linear-gradient(180deg, var(--bg-shade-1) 0%, var(--bg-shade-1) 50%, #ffffff 50%,#ffffff 100%);
+        margin-bottom: 120px;
+        @media (max-width: 991.98px) {
+            margin-bottom: 100px;
+        }
+        @media (max-width: 767.98px) {
+            margin-bottom: 80px;
+        }
+        @media (max-width: 575.98px) {
+            margin-bottom: 60px;
+        }
+        .hero-image-banner{
+            max-width: 1024px;
+            z-index: 50;
+        }
+        &::after{
+            content: '';
+            display: block;
+            height: 1px;
+            width: 100%;
+            background: var(--border-brutal);
+            position: absolute;
+            top: 50%;
+        }
+    }
+    .feature-row-margin{
+        margin-top: 60px;
+        @media (max-width: 767.98px) {
+            margin-top: 50px;
+        }
+        @media (max-width: 575.98px) {
+            margin-top: 40px;
+        }
+        @media (min-width: 1200px){
+            margin-top: 80px;
+        }
+    }
+}

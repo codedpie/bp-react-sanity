@@ -1,0 +1,33 @@
+.contact-section{
+    position: relative;
+    overflow: hidden;
+    .col-cont{
+        z-index: 100;
+    }
+    .bg_1{
+        position: absolute;
+        bottom: 100px;
+        left: -3.1vw;
+        z-index: 0;
+        height: 20vw;
+        @media (max-width: 767.98px) {
+            bottom: 50px;
+            height: 25vw;
+        }
+    }
+    .bg_2{
+        position: absolute;
+        top: 50px;
+        right: -3.1vw;
+        z-index: 0;
+        height: 13vw;
+    }
+    h2 .txt-highlight{
+        position: relative;
+        .scribble{
+            position: absolute;
+            right: -50px;
+            height: calc(2rem + 1vw);
+        }
+    }
+}

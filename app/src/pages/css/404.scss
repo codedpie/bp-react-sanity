@@ -1,0 +1,22 @@
+.nf-section{
+  position: relative;
+  overflow: hidden;
+  .bg_1{
+      position: absolute;
+      bottom: 100px;
+      left: -3.1vw;
+      z-index: 0;
+      height: 20vw;
+      @media (max-width: 767.98px) {
+          bottom: 50px;
+          height: 25vw;
+      }
+  }
+  .bg_2{
+      position: absolute;
+      top: 50px;
+      right: -3.1vw;
+      z-index: 0;
+      height: 13vw;
+  }
+}
