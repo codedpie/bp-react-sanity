@@ -34,7 +34,6 @@ const SubPages = () => {
         }`).then((data) => {
             if (data[0] === undefined) {
                 setErrorPage(true)
-                console.log('error page');
             }
             else {
                 setPost(data[0])

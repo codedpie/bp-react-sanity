@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom"
 import './css/navbar.scss'
 import Logo from '../logo.svg'
 import { useEffect } from "react"
+import { RiArrowDropDownFill } from "react-icons/ri";
 
 const NavBar = ({ data }) => {
 
@@ -225,15 +226,14 @@ const NavBar = ({ data }) => {
                                                     {/* <a href={e.links} className="nav-link dropdown-toggle" >
                                                         {e.title}
                                                     </a> */}
-                                                    <NavLink to={e.href} className="nav-link dropdown-toggle" key={i}>{e.title}</NavLink>
+                                                    <NavLink to={e.href} className="nav-link dropdown-toggle" key={i}>{e.title}<RiArrowDropDownFill /></NavLink>
                                                     <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                         {e.links.map((e2, j) =>
                                                             <li key={j} className="sub-menu"><NavLink className={({ isActive }) => isActive ? 'dropdown-item stact-nav-link' : 'dropdown-item stact-nav-link'} to={e2.href}>{e2.title}</NavLink>
-
                                                                 {e2.links ? <ul className="sub-sub-menu dropdown-menu">
                                                                     {e2.links.map((e3, k) =>
                                                                         <li key={k}>
-                                                                            <NavLink to={e3.href}>{e3.title}</NavLink>
+                                                                            <NavLink to={e3.href}>{e3.title} </NavLink>
 
                                                                             {e3.links ? <ul className="sub-sub-sub-menu dropdown-menu">
                                                                                 {e3.links.map((e4, l) =>

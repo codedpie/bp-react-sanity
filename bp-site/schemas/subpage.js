@@ -9,6 +9,7 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'slug',
@@ -18,6 +19,7 @@ export default defineType({
         source: 'title',
         maxLength: 96,
       },
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'mainImage',
@@ -26,6 +28,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'parent',
@@ -33,11 +36,13 @@ export default defineType({
       description: 'Add Only One Page',
       type: 'array',
       of: [{type: 'reference', to: {type: 'page'}}],
+      validation: Rule => Rule.required()
     }),
     defineField({
       name: 'body',
       title: 'Body',
       type: 'blockContent',
+      validation: Rule => Rule.required()
     }),
   ]
 })

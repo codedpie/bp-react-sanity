@@ -8,9 +8,6 @@ const BlogCardSkeleton = () => {
             <BlogCards />
             <BlogCards />
             <BlogCards />
-            <BlogCards />
-            <BlogCards />
-            <BlogCards />
         </SkeletonTheme>
     )
 }

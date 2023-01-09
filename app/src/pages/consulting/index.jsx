@@ -96,19 +96,19 @@ const Services = () => {
         },
         {
             name: 'Reputation Management',
-            info: ['Google Review Management','Quora Review','Testimonials Video Creation'],
+            info: ['Google Review Management', 'Quora Review', 'Testimonials Video Creation'],
             link: '/services',
             icoUrl: 'assets/service_ico2.svg'
         },
         {
             name: 'Brand Building',
-            info: ['Social Media Marketing','Video Marketing','Influencer & PR'],
+            info: ['Social Media Marketing', 'Video Marketing', 'Influencer & PR'],
             link: '/services',
             icoUrl: 'assets/service_ico3.svg'
         },
         {
             name: 'Sales Automation',
-            info: ['CRM','Leadmade','IVM & Call Tracking'],
+            info: ['CRM', 'Leadmade', 'IVM & Call Tracking'],
             link: '/services',
             icoUrl: 'assets/service_ico4.svg'
         }
